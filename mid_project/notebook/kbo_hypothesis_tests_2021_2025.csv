@@ -1,0 +1,4 @@
+﻿Hypothesis,n,pearson_r,corr_p_value,reg_coef,reg_p_value,r2
+H1: (BB+HBP)/PA ↑ → OBP ↑,50,0.4924,0.000281,0.5911,0.000281,0.2425
+H2: SO/PA ↓ → OBP ↑,50,-0.5305,7.4e-05,-0.3376,7.4e-05,0.2814
+H3: OBP ↑ → wRC+ ↑,50,0.7179,0.0,481.8651,0.0,0.5155
