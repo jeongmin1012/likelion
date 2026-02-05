@@ -1,0 +1,663 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20253.25.1210.1815                               -->
+<workbook original-version='18.1' source-build='2025.3.1 (20253.25.1210.1815)' source-platform='mac' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AnimationOnByDefault />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='koran_bokji' inline='true' name='federated.197jopw16kf6hq178uuhm0a2sh95' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='koran_bokji' name='textscan.0kiw54m03g621g14z6zps036ishq'>
+            <connection class='textscan' directory='/Users/jeongminpark/Desktop/likelion/workspace/09_태블로/data' filename='koran_bokji.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.0kiw54m03g621g14z6zps036ishq' name='koran_bokji.csv' table='[koran_bokji#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='ko_KR' separator=','>
+            <column datatype='string' name='성별' ordinal='0' />
+            <column datatype='real' name='출생년도' ordinal='1' />
+            <column datatype='string' name='혼인상태' ordinal='2' />
+            <column datatype='string' name='종교유뮤' ordinal='3' />
+            <column datatype='real' name='직종' ordinal='4' />
+            <column datatype='real' name='평균임금' ordinal='5' />
+            <column datatype='string' name='지역' ordinal='6' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[koran_bokji.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;ko&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;₩&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;ko_KR&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>성별</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[성별]</local-name>
+            <parent-name>[koran_bokji.csv]</parent-name>
+            <remote-alias>성별</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LKO_RKR' />
+            <object-id>[koran_bokji.csv_5A794855B4E341258DEB50CDC1FF8DB5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>출생년도</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[출생년도]</local-name>
+            <parent-name>[koran_bokji.csv]</parent-name>
+            <remote-alias>출생년도</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[koran_bokji.csv_5A794855B4E341258DEB50CDC1FF8DB5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>혼인상태</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[혼인상태]</local-name>
+            <parent-name>[koran_bokji.csv]</parent-name>
+            <remote-alias>혼인상태</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LKO_RKR' />
+            <object-id>[koran_bokji.csv_5A794855B4E341258DEB50CDC1FF8DB5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>종교유뮤</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[종교유뮤]</local-name>
+            <parent-name>[koran_bokji.csv]</parent-name>
+            <remote-alias>종교유뮤</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LKO_RKR' />
+            <object-id>[koran_bokji.csv_5A794855B4E341258DEB50CDC1FF8DB5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>직종</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[직종]</local-name>
+            <parent-name>[koran_bokji.csv]</parent-name>
+            <remote-alias>직종</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[koran_bokji.csv_5A794855B4E341258DEB50CDC1FF8DB5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>평균임금</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[평균임금]</local-name>
+            <parent-name>[koran_bokji.csv]</parent-name>
+            <remote-alias>평균임금</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[koran_bokji.csv_5A794855B4E341258DEB50CDC1FF8DB5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>지역</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[지역]</local-name>
+            <parent-name>[koran_bokji.csv]</parent-name>
+            <remote-alias>지역</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LKO_RKR' />
+            <object-id>[koran_bokji.csv_5A794855B4E341258DEB50CDC1FF8DB5]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='koran_bokji.csv' datatype='table' name='[__tableau_internal_object_id__].[koran_bokji.csv_5A794855B4E341258DEB50CDC1FF8DB5]' role='measure' type='quantitative' />
+      <column datatype='real' name='[출생년도]' role='dimension' type='quantitative' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='ko_KR' class='hyper' dbname='/var/folders/w3/rml6l6xx3qjc4qvf58x_8ks00000gn/T/tableau-temp/#TableauTemp_04nx7q2100jzwb1e91szs1qtwn75.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='01/29/2026 04:05:10 AM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>성별</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[성별]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>성별</remote-alias>
+              <ordinal>0</ordinal>
+              <family>koran_bokji.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LKO_RKR' />
+              <object-id>[koran_bokji.csv_5A794855B4E341258DEB50CDC1FF8DB5]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>출생년도</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[출생년도]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>출생년도</remote-alias>
+              <ordinal>1</ordinal>
+              <family>koran_bokji.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>96</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[koran_bokji.csv_5A794855B4E341258DEB50CDC1FF8DB5]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>혼인상태</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[혼인상태]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>혼인상태</remote-alias>
+              <ordinal>2</ordinal>
+              <family>koran_bokji.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>9</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LKO_RKR' />
+              <object-id>[koran_bokji.csv_5A794855B4E341258DEB50CDC1FF8DB5]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>종교유뮤</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[종교유뮤]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>종교유뮤</remote-alias>
+              <ordinal>3</ordinal>
+              <family>koran_bokji.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LKO_RKR' />
+              <object-id>[koran_bokji.csv_5A794855B4E341258DEB50CDC1FF8DB5]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>직종</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[직종]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>직종</remote-alias>
+              <ordinal>4</ordinal>
+              <family>koran_bokji.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>185</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[koran_bokji.csv_5A794855B4E341258DEB50CDC1FF8DB5]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>평균임금</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[평균임금]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>평균임금</remote-alias>
+              <ordinal>5</ordinal>
+              <family>koran_bokji.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>646</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[koran_bokji.csv_5A794855B4E341258DEB50CDC1FF8DB5]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>지역</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[지역]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>지역</remote-alias>
+              <ordinal>6</ordinal>
+              <family>koran_bokji.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>7</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LKO_RKR' />
+              <object-id>[koran_bokji.csv_5A794855B4E341258DEB50CDC1FF8DB5]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;대한민국&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='koran_bokji.csv' id='koran_bokji.csv_5A794855B4E341258DEB50CDC1FF8DB5'>
+            <properties context=''>
+              <relation connection='textscan.0kiw54m03g621g14z6zps036ishq' name='koran_bokji.csv' table='[koran_bokji#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='ko_KR' separator=','>
+                  <column datatype='string' name='성별' ordinal='0' />
+                  <column datatype='real' name='출생년도' ordinal='1' />
+                  <column datatype='string' name='혼인상태' ordinal='2' />
+                  <column datatype='string' name='종교유뮤' ordinal='3' />
+                  <column datatype='real' name='직종' ordinal='4' />
+                  <column datatype='real' name='평균임금' ordinal='5' />
+                  <column datatype='string' name='지역' ordinal='6' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='시트 1'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontsize='24'>성별에 따른 평균 임금의 합</run>
+          </formatted-text>
+        </title>
+        <caption>
+          <formatted-text>
+            <run bold='true' fontcolor='#c5c8c6' fontname='Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace' fontsize='8'>1. 그래프 제목 수정</run>
+            <run>Æ&#10;</run>
+            <run bold='true' fontcolor='#c5c8c6' fontname='Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace' fontsize='8'>- 상단에 &quot;시트 1&quot;이라고 적혀 있는 부분이 그래프의 제목이다.</run>
+            <run>Æ&#10;</run>
+            <run bold='true' fontcolor='#c5c8c6' fontname='Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace' fontsize='8'>- 해당 부분을 더블클릭하면 수정할 수 있다.</run>
+            <run>Æ&#10;</run>
+            <run bold='true' fontcolor='#c5c8c6' fontname='Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace' fontsize='8'>- &quot;성별에 따른 평균 임금의 합&quot; 이라고 수정한다.</run>
+            <run>Æ&#10;&#10;</run>
+            <run bold='true' fontcolor='#c5c8c6' fontname='Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace' fontsize='8'>2. 그래프를 그린다.</run>
+            <run>Æ&#10;</run>
+            <run bold='true' fontcolor='#c5c8c6' fontname='Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace' fontsize='8'>- 열선반에 &quot;성별&quot;을 배치한다.</run>
+            <run>Æ&#10;</run>
+            <run bold='true' fontcolor='#c5c8c6' fontname='Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace' fontsize='8'>- 행선반에 &quot;평균임금&quot;을 배치한다.</run>
+            <run>Æ&#10;</run>
+            <run bold='true' fontcolor='#c5c8c6' fontname='Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace' fontsize='8'>- &quot;성별&quot;을 마크에 있는 색상에 넣어준다.</run>
+            <run>Æ&#10;</run>
+            <run bold='true' fontcolor='#c5c8c6' fontname='Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace' fontsize='8'>- &quot;평균임금&quot;을 마크에 있는 레이블에 넣어준다.</run>
+          </formatted-text>
+        </caption>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='koran_bokji' name='federated.197jopw16kf6hq178uuhm0a2sh95' />
+          </datasources>
+          <datasource-dependencies datasource='federated.197jopw16kf6hq178uuhm0a2sh95'>
+            <column-instance column='[성별]' derivation='None' name='[none:성별:nk]' pivot='key' type='nominal' />
+            <column-instance column='[평균임금]' derivation='Sum' name='[sum:평균임금:qk]' pivot='key' type='quantitative' />
+            <column datatype='string' name='[성별]' role='dimension' type='nominal' />
+            <column datatype='real' name='[평균임금]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='refline'>
+            <format attr='stroke-color' id='refline0' value='#000000' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.197jopw16kf6hq178uuhm0a2sh95].[none:성별:nk]' />
+              <text column='[federated.197jopw16kf6hq178uuhm0a2sh95].[sum:평균임금:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.197jopw16kf6hq178uuhm0a2sh95].[sum:평균임금:qk]</rows>
+        <cols>[federated.197jopw16kf6hq178uuhm0a2sh95].[none:성별:nk]</cols>
+      </table>
+      <simple-id uuid='{78FAAB05-6160-444F-935A-B2A1E1758B36}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='30'>
+    <window class='worksheet' maximized='true' name='시트 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='2' param='[federated.197jopw16kf6hq178uuhm0a2sh95].[none:성별:nk]' type='color' />
+          </strip>
+        </edge>
+        <edge name='bottom'>
+          <strip size='2147483647'>
+            <card type='caption' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.197jopw16kf6hq178uuhm0a2sh95].[none:성별:nk]</field>
+            <field>[federated.197jopw16kf6hq178uuhm0a2sh95].[none:혼인상태:nk]</field>
+            <field>[federated.197jopw16kf6hq178uuhm0a2sh95].[sum:평균임금:qk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{F1B43002-A593-4F1F-8EDD-0BD512D297FA}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='384' name='시트 1' width='384'>
+      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
+      gg==
+    </thumbnail>
+  </thumbnails>
+</workbook>

@@ -1,0 +1,1036 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20253.25.1210.1815                               -->
+<workbook original-version='18.1' source-build='2025.3.1 (20253.25.1210.1815)' source-platform='mac' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AnimationOnByDefault />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource hasconnection='false' inline='true' name='Parameters' version='18.1'>
+      <aliases enabled='yes' />
+      <column caption='차원선택' datatype='string' name='[매개 변수 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;지역&quot;'>
+        <calculation class='tableau' formula='&quot;지역&quot;' />
+        <members>
+          <member value='&quot;지역&quot;' />
+          <member value='&quot;상품종류&quot;' />
+          <member value='&quot;배송방식&quot;' />
+        </members>
+      </column>
+      <column caption='측정값선택' datatype='string' name='[매개 변수 2]' param-domain-type='list' role='measure' type='nominal' value='&quot;최대&quot;'>
+        <calculation class='tableau' formula='&quot;최대&quot;' />
+        <members>
+          <member value='&quot;평균&quot;' />
+          <member value='&quot;합계&quot;' />
+          <member value='&quot;최대&quot;' />
+          <member value='&quot;최소&quot;' />
+          <member value='&quot;카운트&quot;' />
+        </members>
+      </column>
+    </datasource>
+    <datasource caption='01_Orders(Superstore KR - VizLab 2021)' inline='true' name='federated.0dd9es60ynxr551bjgchn10bgtw7' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Superstore KR - VizLab 2021' name='excel-direct.1t8apkh05q3tfg1eqdy3c172epj8'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='/Users/jeongminpark/Desktop/likelion/workspace/09_태블로/data/Superstore KR - VizLab 2021.xlsx' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+        </named-connections>
+        <relation connection='excel-direct.1t8apkh05q3tfg1eqdy3c172epj8' name='01_Orders' table='[&apos;01_Orders$&apos;]' type='table'>
+          <columns gridOrigin='A1:U9995:no:A1:U9995:0' header='yes' outcome='6'>
+            <column datatype='integer' name='Row ID' ordinal='0' />
+            <column datatype='string' name='Order ID' ordinal='1' />
+            <column datatype='datetime' name='Order Timestamp' ordinal='2' />
+            <column datatype='date' name='Delivery Date' ordinal='3' />
+            <column datatype='string' name='Delivery Mode' ordinal='4' />
+            <column datatype='string' name='Customer ID' ordinal='5' />
+            <column datatype='string' name='Customer Name' ordinal='6' />
+            <column datatype='string' name='Customer Segment' ordinal='7' />
+            <column datatype='string' name='Country' ordinal='8' />
+            <column datatype='string' name='Address Region' ordinal='9' />
+            <column datatype='string' name='Address SD' ordinal='10' />
+            <column datatype='string' name='Address SGG' ordinal='11' />
+            <column datatype='string' name='Product ID' ordinal='12' />
+            <column datatype='string' name='Product Category' ordinal='13' />
+            <column datatype='string' name='Product Sub-Category' ordinal='14' />
+            <column datatype='string' name='Product Manufacturer' ordinal='15' />
+            <column datatype='string' name='Product Name' ordinal='16' />
+            <column datatype='real' name='Sales' ordinal='17' />
+            <column datatype='integer' name='Quantity' ordinal='18' />
+            <column datatype='real' name='Discount' ordinal='19' />
+            <column datatype='real' name='Profit' ordinal='20' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[01_Orders]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:U9995:no:A1:U9995:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Row ID</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Row ID]</local-name>
+            <parent-name>[01_Orders]</parent-name>
+            <remote-alias>Row ID</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[01!Orders_8DA7CCD310F248F5A4EB228BD25AD6C1]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Order ID</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Order ID]</local-name>
+            <parent-name>[01_Orders]</parent-name>
+            <remote-alias>Order ID</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LKO_RKR_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[01!Orders_8DA7CCD310F248F5A4EB228BD25AD6C1]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Order Timestamp</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[Order Timestamp]</local-name>
+            <parent-name>[01_Orders]</parent-name>
+            <remote-alias>Order Timestamp</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;DATE&quot;</attribute>
+            </attributes>
+            <object-id>[01!Orders_8DA7CCD310F248F5A4EB228BD25AD6C1]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Delivery Date</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[Delivery Date]</local-name>
+            <parent-name>[01_Orders]</parent-name>
+            <remote-alias>Delivery Date</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;DATE&quot;</attribute>
+            </attributes>
+            <object-id>[01!Orders_8DA7CCD310F248F5A4EB228BD25AD6C1]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Delivery Mode</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Delivery Mode]</local-name>
+            <parent-name>[01_Orders]</parent-name>
+            <remote-alias>Delivery Mode</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LKO_RKR_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[01!Orders_8DA7CCD310F248F5A4EB228BD25AD6C1]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Customer ID</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Customer ID]</local-name>
+            <parent-name>[01_Orders]</parent-name>
+            <remote-alias>Customer ID</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LKO_RKR_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[01!Orders_8DA7CCD310F248F5A4EB228BD25AD6C1]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Customer Name</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Customer Name]</local-name>
+            <parent-name>[01_Orders]</parent-name>
+            <remote-alias>Customer Name</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LKO_RKR_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[01!Orders_8DA7CCD310F248F5A4EB228BD25AD6C1]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Customer Segment</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Customer Segment]</local-name>
+            <parent-name>[01_Orders]</parent-name>
+            <remote-alias>Customer Segment</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LKO_RKR_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[01!Orders_8DA7CCD310F248F5A4EB228BD25AD6C1]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Country</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Country]</local-name>
+            <parent-name>[01_Orders]</parent-name>
+            <remote-alias>Country</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LKO_RKR_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[01!Orders_8DA7CCD310F248F5A4EB228BD25AD6C1]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Address Region</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Address Region]</local-name>
+            <parent-name>[01_Orders]</parent-name>
+            <remote-alias>Address Region</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LKO_RKR_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[01!Orders_8DA7CCD310F248F5A4EB228BD25AD6C1]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Address SD</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Address SD]</local-name>
+            <parent-name>[01_Orders]</parent-name>
+            <remote-alias>Address SD</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LKO_RKR_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[01!Orders_8DA7CCD310F248F5A4EB228BD25AD6C1]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Address SGG</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Address SGG]</local-name>
+            <parent-name>[01_Orders]</parent-name>
+            <remote-alias>Address SGG</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LKO_RKR_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[01!Orders_8DA7CCD310F248F5A4EB228BD25AD6C1]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Product ID</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Product ID]</local-name>
+            <parent-name>[01_Orders]</parent-name>
+            <remote-alias>Product ID</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LKO_RKR_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[01!Orders_8DA7CCD310F248F5A4EB228BD25AD6C1]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Product Category</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Product Category]</local-name>
+            <parent-name>[01_Orders]</parent-name>
+            <remote-alias>Product Category</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LKO_RKR_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[01!Orders_8DA7CCD310F248F5A4EB228BD25AD6C1]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Product Sub-Category</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Product Sub-Category]</local-name>
+            <parent-name>[01_Orders]</parent-name>
+            <remote-alias>Product Sub-Category</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LKO_RKR_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[01!Orders_8DA7CCD310F248F5A4EB228BD25AD6C1]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Product Manufacturer</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Product Manufacturer]</local-name>
+            <parent-name>[01_Orders]</parent-name>
+            <remote-alias>Product Manufacturer</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LKO_RKR_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[01!Orders_8DA7CCD310F248F5A4EB228BD25AD6C1]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Product Name</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Product Name]</local-name>
+            <parent-name>[01_Orders]</parent-name>
+            <remote-alias>Product Name</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LKO_RKR_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[01!Orders_8DA7CCD310F248F5A4EB228BD25AD6C1]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Sales</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Sales]</local-name>
+            <parent-name>[01_Orders]</parent-name>
+            <remote-alias>Sales</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[01!Orders_8DA7CCD310F248F5A4EB228BD25AD6C1]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Quantity</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Quantity]</local-name>
+            <parent-name>[01_Orders]</parent-name>
+            <remote-alias>Quantity</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[01!Orders_8DA7CCD310F248F5A4EB228BD25AD6C1]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Discount</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Discount]</local-name>
+            <parent-name>[01_Orders]</parent-name>
+            <remote-alias>Discount</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[01!Orders_8DA7CCD310F248F5A4EB228BD25AD6C1]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Profit</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Profit]</local-name>
+            <parent-name>[01_Orders]</parent-name>
+            <remote-alias>Profit</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[01!Orders_8DA7CCD310F248F5A4EB228BD25AD6C1]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='차원선택필드' datatype='string' name='[Calculation_0725918909980673]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='CASE [Parameters].[매개 변수 1]&#10;WHEN &quot;지역&quot; THEN [Address Region]&#10;WHEN &quot;상품종류&quot; THEN [Product Category]&#10;WHEN &quot;배송방식&quot; THEN [Delivery Mode]&#10;END' />
+      </column>
+      <column caption='측정값선택필드' datatype='real' name='[Calculation_0725918913880066]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='CASE [Parameters].[매개 변수 2]&#10;WHEN &quot;평균&quot; THEN AVG([Sales])&#10;WHEN &quot;합계&quot; THEN SUM([Sales])&#10;WHEN &quot;최대&quot; THEN MAX([Sales])&#10;WHEN &quot;최소&quot; THEN MIN([Sales])&#10;WHEN &quot;카운트&quot; THEN COUNT([Sales])&#10;END' />
+      </column>
+      <column datatype='string' name='[Country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+      <column datatype='integer' name='[Row ID]' role='dimension' type='ordinal' />
+      <column caption='01_Orders' datatype='table' name='[__tableau_internal_object_id__].[01!Orders_8DA7CCD310F248F5A4EB228BD25AD6C1]' role='measure' type='quantitative' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='ko_KR' class='hyper' dbname='/var/folders/w3/rml6l6xx3qjc4qvf58x_8ks00000gn/T/tableau-temp/#TableauTemp_1vjheyb119me671deg7ca0p2m82h.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='02/04/2026 01:41:58 AM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>Row ID</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Row ID]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Row ID</remote-alias>
+              <ordinal>0</ordinal>
+              <family>01_Orders</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>9994</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[01!Orders_8DA7CCD310F248F5A4EB228BD25AD6C1]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Order ID</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Order ID]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Order ID</remote-alias>
+              <ordinal>1</ordinal>
+              <family>01_Orders</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3343</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LKO_RKR' />
+              <object-id>[01!Orders_8DA7CCD310F248F5A4EB228BD25AD6C1]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Order Timestamp</remote-name>
+              <remote-type>135</remote-type>
+              <local-name>[Order Timestamp]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Order Timestamp</remote-alias>
+              <ordinal>2</ordinal>
+              <family>01_Orders</family>
+              <local-type>datetime</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>3343</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[01!Orders_8DA7CCD310F248F5A4EB228BD25AD6C1]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Delivery Date</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[Delivery Date]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Delivery Date</remote-alias>
+              <ordinal>3</ordinal>
+              <family>01_Orders</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>1594</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[01!Orders_8DA7CCD310F248F5A4EB228BD25AD6C1]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Delivery Mode</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Delivery Mode]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Delivery Mode</remote-alias>
+              <ordinal>4</ordinal>
+              <family>01_Orders</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LKO_RKR' />
+              <object-id>[01!Orders_8DA7CCD310F248F5A4EB228BD25AD6C1]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Customer ID</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Customer ID]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Customer ID</remote-alias>
+              <ordinal>5</ordinal>
+              <family>01_Orders</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1029</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LKO_RKR' />
+              <object-id>[01!Orders_8DA7CCD310F248F5A4EB228BD25AD6C1]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Customer Name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Customer Name]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Customer Name</remote-alias>
+              <ordinal>6</ordinal>
+              <family>01_Orders</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1029</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LKO_RKR' />
+              <object-id>[01!Orders_8DA7CCD310F248F5A4EB228BD25AD6C1]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Customer Segment</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Customer Segment]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Customer Segment</remote-alias>
+              <ordinal>7</ordinal>
+              <family>01_Orders</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LKO_RKR' />
+              <object-id>[01!Orders_8DA7CCD310F248F5A4EB228BD25AD6C1]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Country</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Country]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Country</remote-alias>
+              <ordinal>8</ordinal>
+              <family>01_Orders</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LKO_RKR' />
+              <object-id>[01!Orders_8DA7CCD310F248F5A4EB228BD25AD6C1]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Address Region</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Address Region]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Address Region</remote-alias>
+              <ordinal>9</ordinal>
+              <family>01_Orders</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>6</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LKO_RKR' />
+              <object-id>[01!Orders_8DA7CCD310F248F5A4EB228BD25AD6C1]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Address SD</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Address SD]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Address SD</remote-alias>
+              <ordinal>10</ordinal>
+              <family>01_Orders</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>17</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LKO_RKR' />
+              <object-id>[01!Orders_8DA7CCD310F248F5A4EB228BD25AD6C1]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Address SGG</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Address SGG]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Address SGG</remote-alias>
+              <ordinal>11</ordinal>
+              <family>01_Orders</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>253</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LKO_RKR' />
+              <object-id>[01!Orders_8DA7CCD310F248F5A4EB228BD25AD6C1]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Product ID</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Product ID]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Product ID</remote-alias>
+              <ordinal>12</ordinal>
+              <family>01_Orders</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2068</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LKO_RKR' />
+              <object-id>[01!Orders_8DA7CCD310F248F5A4EB228BD25AD6C1]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Product Category</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Product Category]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Product Category</remote-alias>
+              <ordinal>13</ordinal>
+              <family>01_Orders</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LKO_RKR' />
+              <object-id>[01!Orders_8DA7CCD310F248F5A4EB228BD25AD6C1]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Product Sub-Category</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Product Sub-Category]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Product Sub-Category</remote-alias>
+              <ordinal>14</ordinal>
+              <family>01_Orders</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>17</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LKO_RKR' />
+              <object-id>[01!Orders_8DA7CCD310F248F5A4EB228BD25AD6C1]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Product Manufacturer</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Product Manufacturer]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Product Manufacturer</remote-alias>
+              <ordinal>15</ordinal>
+              <family>01_Orders</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>238</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LKO_RKR' />
+              <object-id>[01!Orders_8DA7CCD310F248F5A4EB228BD25AD6C1]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Product Name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Product Name]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Product Name</remote-alias>
+              <ordinal>16</ordinal>
+              <family>01_Orders</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2050</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LKO_RKR' />
+              <object-id>[01!Orders_8DA7CCD310F248F5A4EB228BD25AD6C1]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Sales</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Sales]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Sales</remote-alias>
+              <ordinal>17</ordinal>
+              <family>01_Orders</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3562</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[01!Orders_8DA7CCD310F248F5A4EB228BD25AD6C1]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Quantity</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Quantity]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Quantity</remote-alias>
+              <ordinal>18</ordinal>
+              <family>01_Orders</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>16</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[01!Orders_8DA7CCD310F248F5A4EB228BD25AD6C1]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Discount</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Discount]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Discount</remote-alias>
+              <ordinal>19</ordinal>
+              <family>01_Orders</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>11</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[01!Orders_8DA7CCD310F248F5A4EB228BD25AD6C1]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Profit</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Profit]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Profit</remote-alias>
+              <ordinal>20</ordinal>
+              <family>01_Orders</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>4156</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[01!Orders_8DA7CCD310F248F5A4EB228BD25AD6C1]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;대한민국&quot;' />
+      </semantic-values>
+      <datasource-dependencies datasource='Parameters'>
+        <column caption='차원선택' datatype='string' name='[매개 변수 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;지역&quot;'>
+          <calculation class='tableau' formula='&quot;지역&quot;' />
+        </column>
+        <column caption='측정값선택' datatype='string' name='[매개 변수 2]' param-domain-type='list' role='measure' type='nominal' value='&quot;최대&quot;'>
+          <calculation class='tableau' formula='&quot;최대&quot;' />
+        </column>
+      </datasource-dependencies>
+      <object-graph>
+        <objects>
+          <object caption='01_Orders' id='01!Orders_8DA7CCD310F248F5A4EB228BD25AD6C1'>
+            <properties context=''>
+              <relation connection='excel-direct.1t8apkh05q3tfg1eqdy3c172epj8' name='01_Orders' table='[&apos;01_Orders$&apos;]' type='table'>
+                <columns gridOrigin='A1:U9995:no:A1:U9995:0' header='yes' outcome='6'>
+                  <column datatype='integer' name='Row ID' ordinal='0' />
+                  <column datatype='string' name='Order ID' ordinal='1' />
+                  <column datatype='datetime' name='Order Timestamp' ordinal='2' />
+                  <column datatype='date' name='Delivery Date' ordinal='3' />
+                  <column datatype='string' name='Delivery Mode' ordinal='4' />
+                  <column datatype='string' name='Customer ID' ordinal='5' />
+                  <column datatype='string' name='Customer Name' ordinal='6' />
+                  <column datatype='string' name='Customer Segment' ordinal='7' />
+                  <column datatype='string' name='Country' ordinal='8' />
+                  <column datatype='string' name='Address Region' ordinal='9' />
+                  <column datatype='string' name='Address SD' ordinal='10' />
+                  <column datatype='string' name='Address SGG' ordinal='11' />
+                  <column datatype='string' name='Product ID' ordinal='12' />
+                  <column datatype='string' name='Product Category' ordinal='13' />
+                  <column datatype='string' name='Product Sub-Category' ordinal='14' />
+                  <column datatype='string' name='Product Manufacturer' ordinal='15' />
+                  <column datatype='string' name='Product Name' ordinal='16' />
+                  <column datatype='real' name='Sales' ordinal='17' />
+                  <column datatype='integer' name='Quantity' ordinal='18' />
+                  <column datatype='real' name='Discount' ordinal='19' />
+                  <column datatype='real' name='Profit' ordinal='20' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='시트 1'>
+      <layout-options>
+        <caption>
+          <formatted-text>
+            <run auto-url='true' bold='true' fontcolor='#c5c8c6' fontname='Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace' fontsize='8' hyperlink='tabdoc:load-url url=&amp;quot;1&amp;quot;'>1</run>
+            <run bold='true' fontcolor='#c5c8c6' fontname='Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace' fontsize='8'>. 매개 변수를 만들어준다.</run>
+            <run>Æ&#10;</run>
+            <run bold='true' fontcolor='#c5c8c6' fontname='Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace' fontsize='8'>- 이름 : 차원선택</run>
+            <run>Æ&#10;</run>
+            <run bold='true' fontcolor='#c5c8c6' fontname='Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace' fontsize='8'>- 데이터 유형 : 문자열</run>
+            <run>Æ&#10;</run>
+            <run bold='true' fontcolor='#c5c8c6' fontname='Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace' fontsize='8'>- 허용가능한 값 : 목록</run>
+            <run>Æ&#10;&#10;</run>
+            <run bold='true' fontcolor='#c5c8c6' fontname='Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace' fontsize='8'>- 값 목록을 추가해준다.</run>
+            <run>Æ&#10;</run>
+            <run bold='true' fontcolor='#c5c8c6' fontname='Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace' fontsize='8'>- 값 : 지역, 표시형식 : 지역</run>
+            <run>Æ&#10;</run>
+            <run bold='true' fontcolor='#c5c8c6' fontname='Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace' fontsize='8'>- 값 : 상품종류, 표시형식 : 상품종류</run>
+            <run>Æ&#10;</run>
+            <run bold='true' fontcolor='#c5c8c6' fontname='Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace' fontsize='8'>- 값 : 배송방식, 표시형식 : 배송방식</run>
+            <run>Æ&#10;&#10;</run>
+            <run bold='true' fontcolor='#c5c8c6' fontname='Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace' fontsize='8'>2. 계산된 필드를 만들어준다.</run>
+            <run>Æ&#10;</run>
+            <run bold='true' fontcolor='#c5c8c6' fontname='Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace' fontsize='8'>- 이름 : 차원선택필드</run>
+            <run>Æ&#10;</run>
+            <run bold='true' fontcolor='#c5c8c6' fontname='Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace' fontsize='8'>- 식</run>
+            <run>Æ&#10;</run>
+            <run bold='true' fontcolor='#c5c8c6' fontname='Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace' fontsize='8'>CASE [차원선택]</run>
+            <run>Æ&#10;</run>
+            <run bold='true' fontcolor='#c5c8c6' fontname='Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace' fontsize='8'>WHEN &quot;지역&quot; THEN [Address Region]</run>
+            <run>Æ&#10;</run>
+            <run bold='true' fontcolor='#c5c8c6' fontname='Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace' fontsize='8'>WHEN &quot;상품종류&quot; THEN [Product Category]</run>
+            <run>Æ&#10;</run>
+            <run bold='true' fontcolor='#c5c8c6' fontname='Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace' fontsize='8'>WHEN &quot;배송방식&quot; THEN [Delivery Mode]</run>
+            <run>Æ&#10;</run>
+            <run bold='true' fontcolor='#c5c8c6' fontname='Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace' fontsize='8'>END</run>
+            <run>Æ&#10;&#10;</run>
+            <run bold='true' fontcolor='#c5c8c6' fontname='Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace' fontsize='8'>3. &quot;차원선택필드&quot;를 &quot;열&quot; 선반에 배치한다.</run>
+            <run>Æ&#10;</run>
+            <run bold='true' fontcolor='#c5c8c6' fontname='Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace' fontsize='8'>4. &quot;차원선택&quot; 매개변수에서 &quot;마우스 우클릭 &gt; 매개 변수 표시&quot;를 체크해준다.</run>
+            <run>Æ&#10;&#10;</run>
+            <run bold='true' fontcolor='#c5c8c6' fontname='Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace' fontsize='8'>5. 매개 변수를 만들어준다.</run>
+            <run>Æ&#10;</run>
+            <run bold='true' fontcolor='#c5c8c6' fontname='Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace' fontsize='8'>- 이름 : 측정값 선택</run>
+            <run>Æ&#10;</run>
+            <run bold='true' fontcolor='#c5c8c6' fontname='Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace' fontsize='8'>- 데이터 유형 : 문자열</run>
+            <run>Æ&#10;</run>
+            <run bold='true' fontcolor='#c5c8c6' fontname='Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace' fontsize='8'>- 허용가능한 값 : 목록</run>
+            <run>Æ&#10;&#10;</run>
+            <run bold='true' fontcolor='#c5c8c6' fontname='Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace' fontsize='8'>- 값 목록을 추가해준다.</run>
+            <run>Æ&#10;</run>
+            <run bold='true' fontcolor='#c5c8c6' fontname='Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace' fontsize='8'>- 값 : 평균, 표시형식 : 평균</run>
+            <run>Æ&#10;</run>
+            <run bold='true' fontcolor='#c5c8c6' fontname='Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace' fontsize='8'>- 값 : 합계, 표시형식 : 합계</run>
+            <run>Æ&#10;</run>
+            <run bold='true' fontcolor='#c5c8c6' fontname='Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace' fontsize='8'>- 값 : 최대, 표시형식 : 최대</run>
+            <run>Æ&#10;</run>
+            <run bold='true' fontcolor='#c5c8c6' fontname='Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace' fontsize='8'>- 값 : 최소, 표시형식 : 최소</run>
+            <run>Æ&#10;</run>
+            <run bold='true' fontcolor='#c5c8c6' fontname='Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace' fontsize='8'>- 값 : 카운트, 표시형식 : 카운트</run>
+            <run>Æ&#10;&#10;</run>
+            <run bold='true' fontcolor='#c5c8c6' fontname='Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace' fontsize='8'>6. 계산된 필드를 만들어준다.</run>
+            <run>Æ&#10;</run>
+            <run bold='true' fontcolor='#c5c8c6' fontname='Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace' fontsize='8'>- 이름 : 측정값선택필드</run>
+            <run>Æ&#10;</run>
+            <run bold='true' fontcolor='#c5c8c6' fontname='Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace' fontsize='8'>- 식</run>
+            <run>Æ&#10;</run>
+            <run bold='true' fontcolor='#c5c8c6' fontname='Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace' fontsize='8'>CASE [측정값 선택]</run>
+            <run>Æ&#10;</run>
+            <run bold='true' fontcolor='#c5c8c6' fontname='Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace' fontsize='8'>WHEN &quot;평균&quot; THEN AVG([Sales])</run>
+            <run>Æ&#10;</run>
+            <run bold='true' fontcolor='#c5c8c6' fontname='Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace' fontsize='8'>WHEN &quot;합계&quot; THEN SUM([Sales])</run>
+            <run>Æ&#10;</run>
+            <run bold='true' fontcolor='#c5c8c6' fontname='Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace' fontsize='8'>WHEN &quot;최대&quot; THEN MAX([Sales])</run>
+            <run>Æ&#10;</run>
+            <run bold='true' fontcolor='#c5c8c6' fontname='Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace' fontsize='8'>WHEN &quot;최소&quot; THEN MIN([Sales])</run>
+            <run>Æ&#10;</run>
+            <run bold='true' fontcolor='#c5c8c6' fontname='Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace' fontsize='8'>WHEN &quot;카운트&quot; THEN COUNT([Sales])</run>
+            <run>Æ&#10;</run>
+            <run bold='true' fontcolor='#c5c8c6' fontname='Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace' fontsize='8'>END</run>
+            <run>Æ&#10;&#10;</run>
+            <run bold='true' fontcolor='#c5c8c6' fontname='Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace' fontsize='8'>7. &quot;측정값선택필드&quot;를 &quot;행&quot; 선반에 배치한다.</run>
+            <run>Æ&#10;</run>
+            <run bold='true' fontcolor='#c5c8c6' fontname='Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace' fontsize='8'>8. &quot;측정값 선택&quot;매개변수에서 &quot;마우스 우클릭 &gt; 매개 변수 표시&quot;를 체크해준다.</run>
+            <run>Æ&#10;</run>
+            <run bold='true' fontcolor='#c5c8c6' fontname='Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace' fontsize='8'>9. &quot;측정값선택필드&quot;를 마크의 &quot;색상&quot;에 설정한다.</run>
+            <run>Æ&#10;&#10;</run>
+            <run fontcolor='#000000' fontname='Benton Sans Book' fontsize='8'>Æ&#10;</run>
+          </formatted-text>
+        </caption>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='01_Orders(Superstore KR - VizLab 2021)' name='federated.0dd9es60ynxr551bjgchn10bgtw7' />
+            <datasource caption='매개 변수' name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='차원선택' datatype='string' name='[매개 변수 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;지역&quot;'>
+              <calculation class='tableau' formula='&quot;지역&quot;' />
+            </column>
+            <column caption='측정값선택' datatype='string' name='[매개 변수 2]' param-domain-type='list' role='measure' type='nominal' value='&quot;최대&quot;'>
+              <calculation class='tableau' formula='&quot;최대&quot;' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.0dd9es60ynxr551bjgchn10bgtw7'>
+            <column datatype='string' name='[Address Region]' role='dimension' type='nominal' />
+            <column caption='차원선택필드' datatype='string' name='[Calculation_0725918909980673]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='CASE [Parameters].[매개 변수 1]&#10;WHEN &quot;지역&quot; THEN [Address Region]&#10;WHEN &quot;상품종류&quot; THEN [Product Category]&#10;WHEN &quot;배송방식&quot; THEN [Delivery Mode]&#10;END' />
+            </column>
+            <column caption='측정값선택필드' datatype='real' name='[Calculation_0725918913880066]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='CASE [Parameters].[매개 변수 2]&#10;WHEN &quot;평균&quot; THEN AVG([Sales])&#10;WHEN &quot;합계&quot; THEN SUM([Sales])&#10;WHEN &quot;최대&quot; THEN MAX([Sales])&#10;WHEN &quot;최소&quot; THEN MIN([Sales])&#10;WHEN &quot;카운트&quot; THEN COUNT([Sales])&#10;END' />
+            </column>
+            <column datatype='string' name='[Delivery Mode]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Product Category]' role='dimension' type='nominal' />
+            <column datatype='real' name='[Sales]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_0725918909980673]' derivation='None' name='[none:Calculation_0725918909980673:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_0725918913880066]' derivation='User' name='[usr:Calculation_0725918913880066:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0dd9es60ynxr551bjgchn10bgtw7].[usr:Calculation_0725918913880066:qk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.0dd9es60ynxr551bjgchn10bgtw7].[usr:Calculation_0725918913880066:qk]</rows>
+        <cols>[federated.0dd9es60ynxr551bjgchn10bgtw7].[none:Calculation_0725918909980673:nk]</cols>
+      </table>
+      <simple-id uuid='{133BDA2C-6D0E-4CEC-82F9-716AAEE171C9}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='30'>
+    <window class='worksheet' maximized='true' name='시트 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='compact' param='[Parameters].[매개 변수 1]' type='parameter' />
+            <card mode='compact' param='[Parameters].[매개 변수 2]' type='parameter' />
+          </strip>
+        </edge>
+        <edge name='bottom'>
+          <strip size='2147483647'>
+            <card type='caption' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[Parameters].[매개 변수 1]</field>
+            <field>[federated.0dd9es60ynxr551bjgchn10bgtw7].[none:Calculation_0725918909980673:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{BFECA5D6-5744-41C3-83A6-67C2EC4A609C}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='62' name='시트 1' width='384'>
+      iVBORw0KGgoAAAANSUhEUgAAAYAAAAA+CAYAAAAicMwOAAAACXBIWXMAAA7DAAAOwwHHb6hk
+      AAAKI0lEQVR4nO3cW0wTaR8G8KellQKloLWCCGhAqxFZUFKFKGkMBzWaGC+MpwsTg8dEE028
+      281m98Ib44WbrFETvdDEGAmKF6iJhaCoeAxREAUPqYBCsZhW2gYY2/kuCP2slNJyKtt5fgkx
+      zMz7zn9SnKfzzswrE0VRBBERSY483AUQEVF4MACIiCSKAUBEJFEMACIiiWIAEBFJFAOAiEii
+      GABERBLFACAikigGABGRRDEAiIgkigFARCRRDAAiIoliABARSRQDgIhIohgAREQSxQAgIpIo
+      BgARkUQxAIiIJIoBQEQkUQwAIiKJYgAQEUkUA4CISKIYAEREEsUAICKSKAYAEZFEMQCIiCSK
+      AUBEJFEMACIiiWIAEBFJFAOAxsTlcsHlcoW7DJok/Hwj18+fLQOAiEiiGABERBLFACAikigG
+      ABGRRDEAiIgkigFARCRRDAAiIomSiaIohrsIIiKaerwCICKSKAYAEZFEMQCIiCRKEe4CiKaT
+      qqoq9Pb2Yv369UhMTJywfmtqatDd3Q2j0Yi5c+dOWL/032EymWC1WrF27VokJSWFuxwADAAi
+      H9XV1XA6nSgsLAwYAC6XC01NTejp6YHdbodarYZWq0VWVhY0Gs2w7R8+fIiOjg5kZ2czAMbo
+      8+fPOHv2LGQyGf7+++9wlxOyuro6dHV1ITc3lwFANJnu3buH69evj7rdpk2bUFJSEnS/oiji
+      xo0bqK2tRX9//7D1CoUCBQUF2LFjB6KiokKqmQJzOp3o7u6GTCaDIAhQKpVBt33y5Amqq6tD
+      3mdZWRnmzJnjs+zSpUt48eLFqG2zsrKwb9++kPc5lRgAFLFUKtWI62w2GwBg1qxZIfV57do1
+      1NTUQC6XIz8/H7/99hs0Gg0cDgeam5tRX1+Puro6DAwMYM+ePeOqn3y9efMGwGAIt7S0YNmy
+      ZUG37e3txadPnwAAMpkspHa/BoBCoUBCQsKIbZxOJxwOBzweT9D7CRcGAEUko9EIo9Hod53V
+      asXvv/8OURQxb968oPv88eMH6urqAAB79uyBwWDwWb98+XIYDAacOnUKT58+xfbt2xEbGzv2
+      gyAvQRDw/Plz7+/37t1DVlZWSCdzYPAzOnDgwLhq2blzZ8D1t27dws2bN0O6QgkXPgVEklNf
+      Xw9RFJGcnBzSWKzVaoUgCJDJZFi+fLnfbfR6PVQqFURRRHd390SVLGlutxvnzp1Dd3c3Zs+e
+      DZVKhVevXqGioiLcpfk1NDT4XwgAXgGQpNjtdty/fx8AUFRUNOI3yPLycsTExAAA1q5dC71e
+      j6SkJMTGxsLlcqGmpgalpaXD2j19+hR9fX2Qy+W82TsBvn37hitXrqCxsRFRUVE4ePAgLBYL
+      zp8/j7t378Jms2Hbtm2Ij48Pd6leTqcTADBz5swwVzI6BgBJhiAIOHPmDL5//w6dToeCgoIR
+      tx0abwaAnJwcAINjxxs2bEBFRQUqKirQ0NCA7OxsxMfHw+Vyobm5GS0tLQCA4uJiREdHT+4B
+      RTCbzYba2lqYTCYIgoC4uDjs3bsXqampSE1NRVlZGS5fvoxnz56hubkZJSUlyM/PnxYnXYvF
+      AgBITk4OcyWjYwCQJAiCgIsXL8JsNkOhUGD//v0BL9EPHz6MlJQUAPD5dllaWoqYmBjcuXMH
+      Hz9+xMePH33aJSYmoqioyO/VAY3u+vXrePnyJbq6urzLli5dil27dmH27NneZQaDAfPmzcPV
+      q1fR0tKCyspK3Lx5E5mZmcjPz0dhYeGU1SyKItxuNwRBQH9/v7f2z58/w+FwQK1WD7tfNF0w
+      ACjitbe348KFC+js7IRcLsfu3buRlpYWsM3MmTNHfEKosLAQa9asQUdHB3p6etDb2wu1Wo1Z
+      s2YhLS0NcvngrTWXywW5XB7waSTyJYoiurq6oFQqsXTpUqxbtw6ZmZl+t01JScGxY8fQ2toK
+      k8mE5uZmvH//PqTHekPx+vVrXLhwAR6PB2632/vvSPNp3r59GwCQkZHBACCaahaLBQ8ePEB1
+      dTXcbjdiYmJw4MABLFmyJOS+2tra0NDQAADweDzDTgJOpxO9vb1wOBzeH4/Hg/Xr12PLli0T
+      fWgRa+PGjVi8eDEWL14c9E1UvV4PvV4PQRDw4cOHgJ9vR0cHTCZT0PWsWLHC+0UgOTkZbrcb
+      UVFRmDFjBhQKBRQKBex2O/r6+qDRaJCZmQm1Wu39SUxMhE6nC3p/U40BQBHny5cvuHz5snd4
+      RqFQwGg0Yt26ddBqtWPq02q14tatWwG3kclkUKlUiIuLQ3p6OhITE3kjOEQqlSqk5/t/plQq
+      Rw33r1+/ory8POg+ExISvAGg1Wpx+vTpYduYTCaUl5dDr9dj7969AAaHHIduBgOD9zQGBgaC
+      3u9UYQBQxNFqtbDZbIiOjobRaERxcXHAF3eCsWTJEhw8eBByuRxRUVFQKBRQKpXe8efMzEwc
+      P34cMpkMAwMD6Onp8bbt7OyEIAjjPayIV1lZiba2tgnpy2g0em/eA0B2drbfvwGr1YrKykqU
+      lZX57Wek4afRVFVVeYeApjMGAEWc6OhoHDlyBBqNBnFxcd7l7e3tePPmDex2O+x2OwYGBqDR
+      aJCQkACdTofc3FysWrUK/f39w17gio2NRW5u7rB9DZ3o5XK595HStrY2nDx5chKPMDKZzWaf
+      p6/GY+HChT4BkJSU5PedD7PZjMrKygkfo09LS8OqVat8lr18+RJ9fX0Tup/xYgBQRPp56OXd
+      u3e4cuUKvnz5ErBNdHQ0Vq5cie3bt2PGjBkjbudyuWCz2aBWq/2unzNnDoqLi32WPX78GA6H
+      I4QjkJ59+/bhx48fI643m834999/odFo8McffwTsa7Ifwe3o6MCnT59GHOLLy8tDXl6ez7I/
+      //zT5+mm6YABQBGttbUV//zzDwRBQEpKCgoKCqDX6xEfHw+lUumdYOzVq1d4/Pgx6urqYLFY
+      cPToUe/TPL+qqqqCyWRCaWkp0tPTIZPJoFD8/7+SRqPB1q1bfdq8ffuWATCK0abNGJplVS6X
+      +51xdSo9evQI1dXVKCoqQn5+PjZv3ozU1NSw1jQWDACKaLW1tRAEAVlZWTh06JDPiRoYPKnM
+      nTsXOTk5WL16NU6ePInW1laYzWZkZGT47fPnx/4MBkNQwwc6nQ4ej4cvh0Wg9PR0pKenj7qd
+      wWCA3W6fFi+rDWEAUEQbmgEyLy9v2Mn/VxkZGdDpdLBYLOjs7BwxAMZivBOQ0dhUVFR43872
+      Z2jenhMnTgTsx2g0YvXq1eOqZdOmTeNqPxkYABTRFixYAKvVivr6eqxYscI7v48/TU1N3gnc
+      5s+fP1Ul0iRqb2/3fgkIZLRt7Hb7RJU0rTAAKKKVlJSgqakJ7969w19//YW8vDwsWrTI5x7A
+      169f0djYiMbGRoiiiJycnKDGcxsbG0M+MaSmpnKaiCl05MiRCelnpEkDGxoaQr63o9VqsXnz
+      5okoa9z+BxOaYDgUJjQWAAAAAElFTkSuQmCC
+    </thumbnail>
+  </thumbnails>
+</workbook>
